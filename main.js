@@ -43,6 +43,10 @@ let projects = [
     image: 'textures/RAG.jpg',
     url: 'https://generativeaiwithrag.onrender.com/',
   },
+  {
+    image: 'textures/RAG.jpg',
+    url: 'https://generativeaiwithrag.onrender.com/',
+  },
   
 
  
@@ -606,7 +610,7 @@ function aboutMenuListener() {
 function projectsMenuListener() {
   // create project planes with textures
   projects.forEach((project, i) => {
-    const colIndex = i % 3 === 0 ? 0 : 1;
+    const colIndex = i %3=== 0 ? 0 : 1;
     const rowIndex = Math.floor(i / 3);
     const geometry = new THREE.PlaneGeometry(0.75, 0.4);
     const material = new THREE.MeshBasicMaterial({
@@ -622,7 +626,7 @@ function projectsMenuListener() {
     };
     projectPlane.position.set(
       0.3 + i * 0.8 * colIndex,
-      1 - rowIndex * 0.5,
+      1 - rowIndex * 0.3,
       -1.15
     );
     projectPlane.scale.set(0, 0, 0);
